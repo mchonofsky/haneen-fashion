@@ -52,9 +52,8 @@ hr.star-primary {
     overflow: visible;
 }
 
-/* hr.star-light:after, */
+hr.star-light:after, 
 hr.star-primary:after {
-    background-image: url("img/sewing-icon.png");
     background-size: contain;
     background-repeat: no-repeat;
     content: " ";
@@ -66,11 +65,33 @@ hr.star-primary:after {
     padding: 0 .25em;
 }
 
+hr.star-light:after {
+    background-image: url("img/sewing-icon-white.png");
+}
+
+hr.star-primary:after {
+    background-image: url("img/sewing-icon.png");
+}
+
 hr.star-light {
     border-color: #{{ site.color.primary }};
 }
 
+hr.star-light.white {
+    border-color: white;
+}
+
+hr.star-light.white:after {
+    color: #fff;
+    background-color: #{{ site.color.primary }};
+}
+
 hr.star-light:after {
+    color: inherit;
+}
+
+hr.star-light.none:after {
+    background-image: unset;
     color: inherit;
 }
 
@@ -106,7 +127,7 @@ header .container .splash {
 
 header img {
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 0;
 }
 
 .flexbox {
