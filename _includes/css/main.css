@@ -4,6 +4,11 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Homenaje&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Homenaje&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 body {
     overflow-x: hidden;
 }
@@ -22,7 +27,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #{{ site.color.primary }};
+    color: white;
 }
 
 h1,
@@ -32,7 +37,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Homenaje,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -47,24 +52,26 @@ hr.star-primary {
     overflow: visible;
 }
 
-hr.star-light:after,
+/* hr.star-light:after, */
 hr.star-primary:after {
-    content: "\f005";
+    background-image: url("img/sewing-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: " ";
+    width: 2.5em;
+    height: 2em;
     display: inline-block;
     position: relative;
     top: -.8em;
     padding: 0 .25em;
-    font-family: FontAwesome;
-    font-size: 2em;
 }
 
 hr.star-light {
-    border-color: #fff;
+    border-color: #{{ site.color.primary }};
 }
 
 hr.star-light:after {
-    color: #fff;
-    background-color: #{{ site.color.primary }};
+    color: inherit;
 }
 
 hr.star-primary {
@@ -88,7 +95,13 @@ header {
 
 header .container {
     padding-top: 100px;
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
+}
+
+header .container .splash {
+    padding-top: 0px !important;
+    width: 100vw !important;
+    //padding-bottom: 50px;
 }
 
 header img {
@@ -96,10 +109,24 @@ header img {
     margin: 0 auto 20px;
 }
 
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header .intro-text {
+    position: absolute;
+    color: #{{ site.color.primary }};
+    background: #2c3e50bb;
+    padding: 2em;
+    border-radius: 10px;
+}
+
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Homenaje,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -107,12 +134,12 @@ header .intro-text .name {
 header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        //padding-bottom: 100px;
     }
 
     header .intro-text .name {
@@ -150,7 +177,7 @@ header .intro-text .skills {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Homenaje,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -212,7 +239,7 @@ section.success {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba({{ site.color.primary-rgb }},.9);
+    background: #dddd;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
@@ -481,4 +508,9 @@ footer .footer-below {
 .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+
+
+.splash {
+    width: 100% !important;
 }

@@ -1,11 +1,10 @@
 ---
 layout: default
 modal-id: 1
-date: 2014-07-18
-img: cabin.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+date: 2025-04-15
+img: 09cf6d72-6440-4481-a47c-0bb3dcd16284.jpg
+alt: A wedding dress with an overlapping textured front
+category: Wedding Dresses
+title: Wedding Dresses
+description: Haneen Fashions designs gorgeous wedding dresses for all styles. Jalal can make a custom dress to your specification or tailor a dress to fit you.
 ---
